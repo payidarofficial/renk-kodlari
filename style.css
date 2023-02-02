@@ -1,0 +1,112 @@
+/* Fontlar */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap'); /* LİGHT */
+
+/* Root */
+:root{
+    /* Body Değişken */
+    --arkaplan: #0a0a0a;
+    --yazi-renk: #fff;
+    --yazi-font: 'Raleway', sans-serif;
+    --marginx: 0;
+    --paddingx: 0;
+
+    /* Menu Değişken */
+}
+
+body{
+    background-color: #101113;
+    color: var(--yazi-renk);
+    font-family: var(--yazi-font);
+
+}
+
+.renk{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.renk > .title{
+    text-align: center;
+}
+.renk > .renkler{
+    display: flex;
+    justify-content: space-around;
+}
+.renk > .renkler div{
+    background-color: #181a1d;
+    padding: 15px;
+    border-radius: 7px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.renk > .renkler div > div.palet-1{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.renk > .renkler > div > div.palet-2{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.renk > .renkler > div  span{
+    margin-top: 15px;
+    text-align: center;
+    display: block;
+}
+.renk > .renkler > div > button{
+    background-color: #25292e;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    outline: none;
+    text-align: center;
+    color: var(--yazi-renk);
+    padding: 8px;
+    width: 100px;
+    display: block;
+    margin: 15px auto;
+    cursor: pointer;
+}
+
+/* Kopyalandı */
+.kopyalandi{
+    background-color: #13451a;
+    width: 150px;
+    padding: 10px;
+    transition: 300ms all;
+    position: absolute;
+    top: 15px;
+    left: -50%;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* Copyright */
+#copyright{
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 800px){
+    .renk{
+        position: absolute;
+        left: 50%;
+        top: 0%;
+        transform: translate(-50%);
+        width: 100%;
+    }
+
+    .renk > .renkler{
+        flex-wrap: wrap;
+    }
+    .kopyalandi{
+        position: fixed;
+        top: 15px;
+        left: -50%;
+    }
+}

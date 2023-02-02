@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Pâyidar</title>
+
+        <!-- Meta -->
+        <meta name="title" content="Pâyidar">
+        <meta name="description" content="Pâyidar Official">
+        <meta name="author" content="Pâyidar, SrStâr">
+        <meta name="keywords" content="payidar, payidar official, payidar code, pâyidar code, pâyidar">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+        <!-- Link -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+        <!-- Script -->
+        <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="renk">
+            <h1 class="title">RENK PALETLERİ</h1>
+            <div class="renkler">
+                <div>
+                    <div class="palet-1" style="background-color: #20262E;"></div>
+                    <span class="renk-1">#20262E</span>
+                    <button onclick="payidarx('.renk-1')">Kopyala</button>
+                </div>
+                <div>
+                    <div class="palet-2" style="background-color: #E9E8E8;"></div>
+                    <span class="renk-2">#E9E8E8</span>
+                    <button onclick="payidarx('.renk-2')">Kopyala</button>
+                </diV>
+            </div>
+            <div class="renkler">
+                <div>
+                    <div class="palet-1" style="background-color: #913175"></div>
+                    <span class="renk-3">#20262E</span>
+                    <button onclick="payidarx('.renk-3')">Kopyala</button>
+                </div>
+                <div>
+                    <div class="palet-2" style="background-color: #2C272E"></div>
+                    <span class="renk-4">#E9E8E8</span>
+                    <button onclick="payidarx('.renk-4')">Kopyala</button>
+                </diV>
+            </div>
+            <br/>
+            <span id="copyright">Coded By &hearts; Pâyidar</span>
+        </div>
+        <div class="kopyalandi">
+            <span><i class="bi bi-check2"></i> Kopyalandı!</span>
+        </div>
+
+        <!-- Script -->
+        <script>
+            // Pâyidar Code
+            function payidarx(payidaroot){
+                var payidar = document.querySelector(payidaroot);
+                window.getSelection().selectAllChildren(payidar);
+                document.execCommand("Copy");
+
+                $('.kopyalandi').css({
+                    "visibility": "initial",
+                    "opacity": "1",
+                    "left": "10px"
+                })
+
+                setTimeout(() => {
+                    $('.kopyalandi').css({
+                        "visibility": "hidden",
+                        "opacity": "0",
+                        "left": "-50%"
+                    })
+                }, 1000)
+            }
+        </script>
+    </body>
+</html>
